@@ -18,19 +18,6 @@ a
 
 
 /* Menu */
-nav
-{
-    /* positionnement menu */
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 300px;
-    border: 0px;
-    padding: 40px;
-    margin: 5px;
-    display: flex;
-    justify-content: space-between;
-}
 a 
 {
     /* mise en page texte normal */
