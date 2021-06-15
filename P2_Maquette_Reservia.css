@@ -1,41 +1,50 @@
 /* Global */
-html 
-{   
-    /* police */
-    font-family : 'Raleway', sans-serif ;
-}
+    html 
+    {   
+        /* police */
+        font-family : 'Raleway', sans-serif ;
+    }
 
+/* En-tête de la maquette */
+    .logo /* Logo */
+    {
+        /* taille */
+        width:50%;
+        height:auto;
+        float: left;       
+    }
+    
+    a /* Menu */
+    {
+        /* mise en page texte normal */
+        text-decoration: none;
+        color: black;
+        
 
+    }
+    
+    a:hover /* Menu en survol */
+    {
+        /* mise en page texte en survol */
+        text-decoration: overline;
+        color: #0065FC
+    }
 
-/* Logo */
-a
-{
-    /* taille */
-    width:12%;
-    height:auto 
-}
+    #inscription
+    {
+        /* mis en page inscrption */
+        font-weight: bold;
+        color: #0065FC;
+    }
+   
+    .menu
+    {
+        margin-top: 10px;
+        display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+    }
 
-
-
-/* Menu */
-a 
-{
-    /* mise en page texte normal */
-    text-decoration: none;
-    color: black;
-}
-a:hover
-{
-    /* mise en page texte en survol */
-    text-decoration: overline;
-    color: #0065FC
-}
-#inscription
-{
-    /* mis en page inscrption */
-    font-weight: bold;
-    color: #0065FC;
-}
 
 
 
@@ -45,21 +54,16 @@ a:hover
 
 
 /* Paragraphe */
-
+.accroche
+{
+    clear: both;
+}
 
 
 /* Barre de recherche */
 input
 {
     border:solid 1px #F2F2F2;
--moz-border-radius-topleft: 50px;
--moz-border-radius-topright:50px;
--moz-border-radius-bottomleft:50px;
--moz-border-radius-bottomright:50px;
--webkit-border-top-left-radius:50px;
--webkit-border-top-right-radius:50px;
--webkit-border-bottom-left-radius:50px;
--webkit-border-bottom-right-radius:50px;
 border-top-left-radius:50px;
 border-top-right-radius:50px;
 border-bottom-left-radius:50px;
@@ -69,14 +73,6 @@ border-bottom-right-radius:50px;
 .fa-map-marker-alt
 {
     border:solid 1px #F2F2F2;
--moz-border-radius-topleft: 50px;
--moz-border-radius-topright:0px;
--moz-border-radius-bottomleft:50px;
--moz-border-radius-bottomright:0px;
--webkit-border-top-left-radius:50px;
--webkit-border-top-right-radius:0px;
--webkit-border-bottom-left-radius:50px;
--webkit-border-bottom-right-radius:0px;
 border-top-left-radius:50px;
 border-top-right-radius:0px;
 border-bottom-left-radius:50px;
@@ -88,14 +84,6 @@ border-bottom-right-radius:0px;
 button
 {
     border:solid 1px #0065FC;
--moz-border-radius-topleft: 0px;
--moz-border-radius-topright:50px;
--moz-border-radius-bottomleft:0px;
--moz-border-radius-bottomright:50px;
--webkit-border-top-left-radius:0px;
--webkit-border-top-right-radius:50px;
--webkit-border-bottom-left-radius:0px;
--webkit-border-bottom-right-radius:50px;
 border-top-left-radius:0px;
 border-top-right-radius:50px;
 border-bottom-left-radius:0px;
@@ -111,14 +99,6 @@ i
 {
     color: #0065FC;
     border:solid 2px #DEEBFF;
--moz-border-radius-topleft: 50px;
--moz-border-radius-topright:50px;
--moz-border-radius-bottomleft:50px;
--moz-border-radius-bottomright:50px;
--webkit-border-top-left-radius:50px;
--webkit-border-top-right-radius:50px;
--webkit-border-bottom-left-radius:50px;
--webkit-border-bottom-right-radius:50px;
 border-top-left-radius:50px;
 border-top-right-radius:50px;
 border-bottom-left-radius:50px;
@@ -128,14 +108,6 @@ border-bottom-right-radius:50px;
 label
 {
     border:solid 2px #F2F2F2;
--moz-border-radius-topleft: 0px;
--moz-border-radius-topright:50px;
--moz-border-radius-bottomleft:0px;
--moz-border-radius-bottomright:50px;
--webkit-border-top-left-radius:0px;
--webkit-border-top-right-radius:50px;
--webkit-border-bottom-left-radius:0px;
--webkit-border-bottom-right-radius:50px;
 border-top-left-radius:0px;
 border-top-right-radius:50px;
 border-bottom-left-radius:0px;
@@ -145,3 +117,36 @@ border-bottom-right-radius:50px;
 
 
 /* Information recherche */
+
+/* Photo */
+img
+{
+    /* taille */
+    width:12%;
+    height:auto;
+    border:solid 4px #ffffff;
+border-top-left-radius:15px;
+border-top-right-radius:15px;
+border-bottom-left-radius:0px;
+border-bottom-right-radius:0px;
+}
+
+.Hebergement_a_marseille
+{
+    background-color: #F2F2F2;
+    width: 75%;
+}
+.les_plus_populaire
+{
+    background-color: #F2F2F2;
+    width: 25%;
+}
+.info_chambre
+{
+    border:solid 4px #ffffff;
+border-top-left-radius:0px;
+border-top-right-radius:0px;
+border-bottom-left-radius:15px;
+border-bottom-right-radius:15px;
+background-color: #ffffff;
+}
