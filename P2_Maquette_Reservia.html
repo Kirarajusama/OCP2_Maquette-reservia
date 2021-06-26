@@ -14,18 +14,20 @@
     </head>
 
     <body>
+        <main class="contenaire">
         <!--en-tête du la maquette -->
         <header>
             <section>
                 <!-- Logo -->
-                <a class="logo" href="#"><img src="images/logo/Reservia@3x.png" alt="Logo Reservia"></a>
+                <a href="#"><img class="logo" src="images/logo/Reservia@3x.png" alt="Logo Reservia"></a>
             
                 <!-- Menu -->
-                <nav> 
-                    <a href="#hebergement">Hébergements</a>
-                    <a href="#activite">Activités</a>
-                    <a id= "inscription" href="#">S'inscrire</a>
-                
+                <nav class="menu"> 
+                    <ul>
+                        <li><a href="#hebergement">Hébergements</a></li>
+                        <li><a href="#activite">Activités</a></li>
+                        <li><a id= "inscription" href="#">S'inscrire</a></li>
+                    </ul> 
                 </nav>
             </section> 
 
@@ -35,11 +37,9 @@
                 <p>En plein centre ville ou en pleine nature</p>
             
                 <!-- Barre de recherche -->
-                <div class="recherche">
                 <!-- icône --> <i class="fas fa-map-marker-alt"></i> 
                 <input type="search" placeholder="Marseille, France"/>
                     <button class="recherche" type="button">Recherche</button>
-                </div>
             </section>
 
             <!-- Filtres -->
@@ -211,12 +211,14 @@
 
         <section>
             <h2 id="activite">Activités à Marserille</h2>
-            <div class="activites">
+            <div class="Image1">
             <article>
                 <!-- image -->
                 <p><img class="a1" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo Vieux Port"/></p>
                 <h3>Vieux Port</h3>
             </article>
+            </div>
+            <div class="Image2&3">
             <article>
                 <!-- image -->
                 <p><img class="a2" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo Fort de Pomègues"/></p>
@@ -227,11 +229,15 @@
                 <p><img class="a3" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo Îles du Frioul"/></p>
                 <h3>Îles du Frioul</h3>
             </article>
+            </div>
+            <div class="Image4">
             <article>
                 <!-- image -->
                 <p><img class="a4" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo Parc National Des Calanques"/></p>
                 <h3>Parc National des Calanques</h3>
             </article>
+            </div>
+            <div class="Image5&6">
             <article>
                 <!-- image -->
                 <p><img class="a5" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo Notre-Dame-de-la-Garde"/></p>
@@ -244,7 +250,7 @@
             </article>
             </div>
         </section>
-
+        </main>
         <!-- Pied de la maquette -->
         <footer>
             <nav class="">
