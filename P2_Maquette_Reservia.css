@@ -1,14 +1,14 @@
-/* Global */
-
+    * {
+        box-sizing: border-box;
+    }
     html 
     {   
-        /* police */
         font-family : 'Raleway', sans-serif ;
     }
 
     .contenaire
     {
-        margin-top: 20px;
+        margin: 20px;
     }
 
     body
@@ -16,27 +16,54 @@
         margin: 0px;
     }
 
-/* En-tête de la maquette */
-
-    .logo /* Logo */
+    .flex
     {
-        /* taille */
-        width:10%;
-        height:auto;
-        float: left;       
+        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     }
 
-    a /* Menu */
+    ul
+    {
+        padding:0px ;
+    }
+
+    li
+    {
+        list-style-type: none;
+    }
+
+    .space-between
+    {
+        justify-content: space-between;
+    }
+
+/* En-tête de la maquette */
+
+    .logo
+    {
+        width:25%;
+        height:auto;      
+    }
+
+    .espace
+    {
+        padding: 15px;
+    }
+
+    nav ul a /* Menu */
     {
         /* mise en page texte normal */
         text-decoration: none;
         color: black;
     }
     
-    a:hover /* Menu en survol */
+    nav ul a:hover /* Menu en survol */
     {
         /* mise en page texte en survol */
-        text-decoration: overline;
+        box-shadow: 0px 2px #0065FC inset;
         color: #0065FC;
     }
 
@@ -46,12 +73,7 @@
         font-weight: bold;
         color: #0065FC;
     }
-   
-    nav header
-    {
-        display: flex;
-            justify-content: space-around;
-    }
+
     /* Titre */
 
 
@@ -87,6 +109,7 @@
         background-color: #0065FC;
         color : #F2F2F2;
         padding: 12px 10px 12px 10px;
+        cursor: pointer;
     }
 
     /* Filtres */
@@ -113,6 +136,7 @@
         border-radius:50px 50px 50px 50px;
         font-weight:bold;
         padding: 10px 10px 10px 0px;
+        cursor: pointer;
     }
 
     label:hover /* nom filtre au survol */
@@ -190,17 +214,6 @@
         display: flex;
         flex-wrap: wrap;
     }
-
-    .hebergement
-    {
-        display: flex;
-    }
-
-    .activites
-    {
-        display: flex;
-        flex-wrap: wrap;
-    }
     
     #rempli
     {
@@ -225,11 +238,6 @@
         border: 0px;
     }
 
-    .populaire
-    {
-        display: flex;
-    }
-
     .imgp
     {
         float: left;
@@ -247,11 +255,22 @@
     {
         flex-wrap: wrap;
     }
+
     footer
     {
-        display: flex;
-        justify-content: space-evenly;
         border:solid 2px #F2F2F2;
         border-radius:0px 0px 0px 0px;
-        background-color: #F2F2F2
+        background-color: #F2F2F2;
     }
+
+    footer div
+    {
+        margin-right: 15%;
+    }
+
+    footer div a
+    {
+        color: black;
+    }
+
+    
