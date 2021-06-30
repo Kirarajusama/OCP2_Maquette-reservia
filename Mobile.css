@@ -1,0 +1,331 @@
+/* Global */
+    * 
+    {
+        -moz-box-sizing    : border-box;        /* Firefox */
+        -webkit-box-sizing : border-box;        /* Safari */
+        box-sizing         : border-box;        /* evite le dépacement */
+    }    
+
+    html 
+    {   
+        font-family : 'Raleway', sans-serif ;       /* police écriture site */
+    }
+
+    .flex
+    {
+        display: -webkit-box;       /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+        display: -ms-flexbox;      /* TWEENER - IE 10 */
+        display: -webkit-flex;     /* NEW - Chrome */
+        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+
+        /* garantie la mise en page flex sur tout les navigateur */
+    }
+
+    a
+    {
+        text-decoration: none;      /* Annulation des décoration de lien */
+        color: black;             /* Couleur des lien */
+    }
+
+    .bold, h1, h2, h3, strong
+    {
+    font-weight: bold;      /* mise en gras de l'inscription */
+    }
+
+    h3
+    {
+        margin: 0px;
+    }
+
+    div p
+    {
+        margin: 0px;
+    }
+
+    div i
+    {
+        margin: 0px;
+    }
+
+
+/* Liste */
+    ul
+    {
+        padding:0px ;       /*marge intérieur des listes */
+    }
+
+    li
+    {
+        list-style-type: none;      /* suppression des puces des listes */
+    }
+
+
+/* Image */    
+    article
+    {
+        margin: 15px;
+        border-radius:15px 15px 15px 15px;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 10px #b9b9b3;
+    }
+
+
+    .art_hebergement
+    {
+        margin: 10px 10px 10px 10px;
+        padding: 6px;
+        border-radius:15px 15px 15px 15px;
+    }
+    
+    .art_populaire
+    {
+        margin: 10px 10px 10px 10px;
+        padding: 6px;
+        border-radius:15px 15px 15px 15px;
+        background-color: #ffffff;
+    }
+
+    .imgh       /*image hébergelent à marseille */
+    {
+        object-fit: cover;          /* ajustement image */
+        object-position: center;
+        height: 150px;
+        width: 200%;
+        border-radius:15px 15px 0px 0px;
+    }
+
+    .imgp       /* image les plus populaire */
+    {
+        object-fit: cover;
+        object-position: center;
+        height: 175px;
+        width: 45%;
+        float: left;
+        border-radius:15px 0px 0px 15px;
+    }
+
+    img[class*="imga"]
+    {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px 15px 0px 0px;
+        width: 200%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .imga10, .imga13        /* image vieux port et parc national des calanques */
+    {
+        height: 385px;
+    }
+
+    .imga11                 /* image fort de pomègues */
+    {
+        height: 170px;
+    }
+
+    .imga12                 /* image iles de frioul */
+    {
+        height: 150px;
+    }
+
+    .imga14, .imga15        /* image notre dame de la garde et parc longchamp */
+    {
+        height: 160px;
+    }
+    
+
+/* icone */
+    .lieu
+    {
+        border:solid 1px #F2F2F2;
+        border-radius:10px 0px 0px 10px;
+        background-color: #F2F2F2;
+        color: black;
+        padding: 15px 10px 15px 10px;
+        margin: 0px;
+    }
+
+    .filtre
+    {
+        color: #0065FC;
+        border:solid 2px #DEEBFF;
+        border-radius:50px 50px 50px 50px;
+        background-color: #DEEBFF;
+        margin: 0px 0px 0px 0px;
+        padding: 11px 11px 11px 11px;
+    }
+
+    .i
+    {
+        border:solid 1px #F2F2F2;
+        background-color: #ffffff;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 15px 10px 15px;
+        border-radius:50px 50px 50px 50px;
+        color: #0065FC;
+    }
+
+    .rempli
+    {
+        color: #0065FC;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .vide
+    {
+        color: #F2F2F2;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .stat
+    {
+        color: black;
+        background-color: #F2F2F2;
+        border: 0px;
+    }
+
+
+/* icone */
+    .lieu
+    {
+        border:solid 1px #F2F2F2;
+        border-radius:10px 0px 0px 10px;
+        background-color: #F2F2F2;
+        color: black;
+        padding: 15px 10px 15px 10px;
+        margin: 0px;
+    }
+
+    .filtre
+    {
+        color: #0065FC;
+        border:solid 2px #DEEBFF;
+        border-radius:50px 50px 50px 50px;
+        background-color: #DEEBFF;
+        margin: 0px 0px 0px 0px;
+        padding: 11px 11px 11px 11px;
+    }
+
+    .i
+    {
+        border:solid 1px #F2F2F2;
+        background-color: #ffffff;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 15px 10px 15px;
+        border-radius:50px 50px 50px 50px;
+        color: #0065FC;
+    }
+
+    .rempli
+    {
+        color: #0065FC;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .vide
+    {
+        color: #F2F2F2;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .stat
+    {
+        color: black;
+        background-color: #F2F2F2;
+        border: 0px;
+    }
+
+
+/* En-tête de la maquette */
+    nav ul a 
+    {
+        color: black;             /* couleur du menu */
+    }
+    
+    nav ul a:hover
+    {
+        border-bottom: #0065FC;      /* ombre de bordure du menu au survol */
+        color: #0065FC;                         /* couleur du menu au survol */
+    }
+
+    #inscription
+    {
+        color: #0065FC;       /* couleur de l'inscrption */
+    }
+
+
+    /* Barre de recherche */
+    input /* barre d'écriture*/
+    {
+        border:solid 2px #F2F2F2;
+        border-radius:0px 0px 0px 0px;
+        margin: 0px -5px 0px -5px;
+        padding: 15px 10px 15px 10px;
+    }
+
+
+/* Filtres */
+     input[type="checkbox"]
+     {
+         opacity: 0;
+     }
+ 
+     label /* nom filtre */
+     {
+         border:solid 3px #F2F2F2;
+         max-width: 10px;
+         max-height: 10px;
+         border-radius:50px 50px 50px 50px;
+         font-weight:bold;
+         padding: 10px 10px 10px 0px;
+         margin: 0px 10px 0px 10px;
+         cursor: pointer;
+     }
+ 
+     label:hover /* nom filtre au survol */
+     {
+         border:solid 3px #F2F2F2;
+         border-radius:50px 50px 50px 50px;
+         font-weight:bold;
+         background-color: #F2F2F2;
+         padding: 10px 10px 10px 0px;
+     }
+
+
+/* Pied de page */
+    footer
+    {
+        border:solid 2px #F2F2F2;
+        border-radius:0px 0px 0px 0px;
+        background-color: #F2F2F2;
+        padding: 20px;
+
+    }
+
+    footer div
+    {
+        margin-right: 15%;
+    }
+
+    footer div a
+    {
+        color: black;
+    }
