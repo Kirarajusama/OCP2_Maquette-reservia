@@ -1,119 +1,185 @@
-    * {
-        box-sizing: border-box;
+/* ? */    
+    * 
+    {
+        -moz-box-sizing    : border-box;        /* Firefox */
+        -webkit-box-sizing : border-box;        /* Safari */
+        box-sizing         : border-box;        /* evite le dépacement */
     }
+
+
+/* Global */    
     html 
     {   
-        font-family : 'Raleway', sans-serif ;
+        font-family : 'Raleway', sans-serif ;       /* police écriture site */
     }
 
     .contenaire
     {
-        margin: 20px;
+        margin: 20px;       /* marge extérieur body hors footer */
     }
 
     body
     {
-        margin: 0px;
+        margin: 0px;        /* annulation marge extérieur automatique*/
     }
 
     .flex
     {
-        display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+        display: -webkit-box;       /* OLD - iOS 6-, Safari 3.1-6 */
         display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
         display: -ms-flexbox;      /* TWEENER - IE 10 */
         display: -webkit-flex;     /* NEW - Chrome */
         display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    }
 
-    ul
-    {
-        padding:0px ;
-    }
-
-    li
-    {
-        list-style-type: none;
+        /* garantie la mise en page flex sur tout les navigateur */
     }
 
     .space-between
     {
-        justify-content: space-between;
+        justify-content: space-between;     /* l'espace entre les élèments et égal*/
     }
 
-/* En-tête de la maquette */
+    a
+    {
+        text-decoration: none;      /* Annulation des décoration de lien */
+        color: black;             /* Couleur des lien */
+    }
 
+    img 
+    { 
+        max-width: 100%;        /* Taille maximum de l'image */
+    }
+
+    .bold, h1, h2, h3, strong
+    {
+    font-weight: bold;      /* mise en gras de l'inscription */
+    }
+
+    h3
+    {
+        margin: 0px;
+    }
+
+    div p
+    {
+        margin: 0px;
+    }
+
+    div i
+    {
+        margin: 0px;
+    }
+
+    .padding
+    {
+        padding: 15px;
+        justify-content: center;
+    }
+
+
+/* Liste */
+    ul
+    {
+        padding:0px ;       /*marge intérieur des listes */
+    }
+
+    li
+    {
+        list-style-type: none;      /* suppression des puces des listes */
+    }
+
+
+/* Image */
     .logo
     {
-        width:25%;
+        width:35%;
         height:auto;      
     }
 
-    .espace
+    article
     {
-        padding: 15px;
+        margin: 15px;
+        border-radius:15px 15px 15px 15px;
+        background-color: #ffffff;
+        box-shadow: 1px 1px 10px #b9b9b3;
     }
 
-    nav ul a /* Menu */
+
+    .art_hebergement, .art_populaire
     {
-        /* mise en page texte normal */
-        text-decoration: none;
-        color: black;
+        margin: 10px 10px 10px 10px;
+        padding: 6px;
+        border-radius:15px 15px 15px 15px;
+        background-color: #ffffff;
+    }
+
+    .art_hebergement
+    {
+        flex: 1;
+    }   
+
+    .imgh       /*image hébergelent à marseille */
+    {
+        object-fit: cover;          /* ajustement image */
+        object-position: center;
+        height: 150px;
+        width: 200%;
+        border-radius:15px 15px 0px 0px;
+    }
+
+    .imgp       /* image les plus populaire */
+    {
+        object-fit: cover;
+        object-position: center;
+        height: 175px;
+        width: 45%;
+        float: left;
+        border-radius:15px 0px 0px 15px;
+    }
+
+    img[class*="imga"]
+    {
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px 15px 0px 0px;
+        width: 200%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .imga10, .imga13        /* image vieux port et parc national des calanques */
+    {
+        height: 385px;
+    }
+
+    .imga11                 /* image fort de pomègues */
+    {
+        height: 170px;
+    }
+
+    .imga12                 /* image iles de frioul */
+    {
+        height: 150px;
+    }
+
+    .imga14, .imga15        /* image notre dame de la garde et parc longchamp */
+    {
+        height: 160px;
     }
     
-    nav ul a:hover /* Menu en survol */
-    {
-        /* mise en page texte en survol */
-        box-shadow: 0px 2px #0065FC inset;
-        color: #0065FC;
-    }
 
-    #inscription
-    {
-        /* mis en page inscrption */
-        font-weight: bold;
-        color: #0065FC;
-    }
-
-    /* Titre */
-
-
-    /* Paragraphe */
-    .accroche
-    {
-        /* arrêt float */
-        clear: both;
-    }
-
-    /* Barre de recherche */
-        input /* barre d'écriture*/
-    {
-        border:solid 2px #F2F2F2;
-        border-radius:0px 0px 0px 0px;
-        margin: 0px -5px 0px -5px;
-        padding: 11px 10px 11px 10px;
-    }
-
-    .fa-map-marker-alt /* icône */
+/* icone */
+    .lieu
     {
         border:solid 1px #F2F2F2;
         border-radius:10px 0px 0px 10px;
         background-color: #F2F2F2;
         color: black;
-        padding: 10px 10px 13px 10px;
+        padding: 15px 10px 15px 10px;
+        margin: 0px;
     }
 
-    button /* bouton de recherche */
-    {
-        border:solid 1px #0065FC;
-        border-radius:0px 10px 10px 0px;
-        background-color: #0065FC;
-        color : #F2F2F2;
-        padding: 12px 10px 12px 10px;
-        cursor: pointer;
-    }
-
-    /* Filtres */
-    i /* icône */
+    .filtre
     {
         color: #0065FC;
         border:solid 2px #DEEBFF;
@@ -123,6 +189,99 @@
         padding: 11px 11px 11px 11px;
     }
 
+    .i
+    {
+        border:solid 1px #F2F2F2;
+        background-color: #ffffff;
+        margin: 10px 10px 10px 10px;
+        padding: 10px 15px 10px 15px;
+        border-radius:50px 50px 50px 50px;
+        color: #0065FC;
+    }
+
+    .rempli
+    {
+        color: #0065FC;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .vide
+    {
+        color: #F2F2F2;
+        background-color: #ffffff;
+        border: 0px;
+        width: 5px;
+        height: 5px;
+        margin: 4%;
+    }
+
+    .stat
+    {
+        color: black;
+        background-color: #F2F2F2;
+        border: 0px;
+    }
+
+
+/* En-tête de la maquette */
+    .espace
+    {
+        padding: 36px;      /* marge intérieur menu */
+    }
+
+    nav ul a 
+    {
+        color: black;             /* couleur du menu */
+    }
+    
+    nav ul a:hover
+    {
+        box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
+        color: #0065FC;                         /* couleur du menu au survol */
+    }
+
+    #inscription
+    {
+        color: #0065FC;       /* couleur de l'inscrption */
+    }
+
+
+    /* Barre de recherche */
+        input /* barre d'écriture*/
+    {
+        border:solid 2px #F2F2F2;
+        border-radius:0px 0px 0px 0px;
+        margin: 0px -5px 0px -5px;
+        padding: 15px 10px 15px 10px;
+    }
+
+    button /* bouton de recherche */
+    {
+        border:solid 1px #0065FC;
+        border-radius:0px 10px 10px 0px;
+        background-color: #0065FC;
+        color : #F2F2F2;
+        padding: 15px 10px 15px 10px;
+        cursor: pointer;
+        margin: 0px;
+    }
+
+    H1
+    {
+    margin-top: 19px;
+    margin-bottom: 5px;
+    }
+
+    H1+p
+    {
+        margin-top: 5px;
+    }
+
+    /* Filtres */
     input[type="checkbox"]
     {
         opacity: 0;
@@ -136,6 +295,7 @@
         border-radius:50px 50px 50px 50px;
         font-weight:bold;
         padding: 10px 10px 10px 0px;
+        margin: 0px 10px 0px 10px;
         cursor: pointer;
     }
 
@@ -150,32 +310,16 @@
 
 
     /* Information recherche */
-    .fa-info
-    {
-        border:solid 1px #F2F2F2;
-        background-color: #ffffff;
-        margin: 10px 10px 10px 10px;
-        padding: 10px 15px 10px 15px;
-    }
+     
 
-    /* Photo */
-    img
-    {
-        /* taille */
-        width:225px;
-        height:150px;
-        margin: 0px 5px 0px 5px;
-        border-radius:15px 15px 0px 0px;
-    }
 
-    article
-    {
-        margin: 10px 10px 10px 10px;
-        padding: 1px 1px 1px 1px;
-        border:solid 4px #ffffff;
-        border-radius:15px 15px 15px 15px;
-        background-color: #ffffff;
-    }
+
+
+
+
+
+
+    
 
     .Hebergement_a_marseille
     {
@@ -206,61 +350,24 @@
     {
         color: black;
         background-color: #F2F2F2;
-        display: flex;
     }
 
     .chambre
     {
-        display: flex;
         flex-wrap: wrap;
     }
     
-    #rempli
-    {
-        color: #0065FC;
-        background-color: #ffffff;
-        border: 0px;
-        width: 5px;
-        height: 5px;
-    }
+    
 
-    #vide
-    {
-        color: #F2F2F2;
-        background-color: #ffffff;
-        border: 0px;
-    }
 
-    #stat
-    {
-        color: black;
-        background-color: #F2F2F2;
-        border: 0px;
-    }
-
-    .imgp
-    {
-        float: left;
-        width: 150px;
-        height: 200px;
-        border-radius:15px 0px 0px 15px;
-    }
-
-    .a1,.a4
-    {
-        height: 400px;
-    }
-
-    .a2,.a5
-    {
-        flex-wrap: wrap;
-    }
-
+/* Pied de page */
     footer
     {
         border:solid 2px #F2F2F2;
         border-radius:0px 0px 0px 0px;
         background-color: #F2F2F2;
+        padding: 20px;
+
     }
 
     footer div
