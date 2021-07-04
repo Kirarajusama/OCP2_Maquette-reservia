@@ -231,7 +231,7 @@
 /* En-tête de la maquette */
     .espace
     {
-        padding: 36px;      /* marge intérieur menu */
+        padding: 15px;      /* marge intérieur menu */
     }
 
     nav ul a 
