@@ -40,6 +40,10 @@
         justify-content: space-between;     /* l'espace entre les élèments et égal*/
     }
 
+    br
+    {
+        display: none;
+    }
     a
     {
         text-decoration: none;      /* Annulation des décoration de lien */
@@ -358,6 +362,10 @@
         flex-wrap: wrap;
     }    
     
+    .logement
+{
+    flex-direction: row-reverse;
+}
 
 
 /* Pied de page */

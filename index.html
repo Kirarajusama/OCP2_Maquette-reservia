@@ -6,8 +6,8 @@
         <!-- Icône -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
         <!-- Fichier CSS -->
-        <link rel="stylesheet" href="Style.css"/>
-        <link rel="stylesheet" media="screen and (max-width: 500px)" href="Mobile.css"/>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 500px)" href="mobile.css"/>
         <!-- Police -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -25,13 +25,13 @@
             
                 <!-- Menu -->
                 <nav>
-                    <ul class="flex">
-                        <li><a class="espace" href="#hebergement">Hébergements</a></li>
-                        <li><a class="espace" href="#activite">Activités</a></li>
-                        <li><a class="espace bold" id= "inscription" href="#">S'inscrire</a></li>
+                    <ul class="flex menu">
+                        <li class="hebergement"><a class="espace" href="#hebergement">Hébergements</a></li>
+                        <li class="activite"><a class="espace" href="#activite">Activités</a></li>
+                        <li class="inscription"><a class="espace bold" id= "inscription" href="#">S'inscrire</a></li>
                     </ul> 
                 </nav>
-                </section> 
+            </section> 
 
             <section class="accroche"> 
                 <!-- Texte -->
@@ -46,16 +46,16 @@
 
             <!-- Filtres -->
             <p class="Filtres bold">
-                Filtres
+                Filtres <br/> 
                 <label for="Economique" class="filtre-economie">
                     <i class="filtre fas fa-money-bill-wave"></i> Economique <input type="checkbox" name="Economique" id="Economique"/>
                 </label>
                 <label for="Familial" class="filtre-famille">
                     <i class="filtre fas fa-child"></i> Familial <input type="checkbox" name="Familial" id="Familial"/>
-                </label>
+                </label> <br/>
                 <label for="Romantique" class="filtre-romantique">
                     <i class="filtre fas fa-heart"></i> Romantique <input type="checkbox" name="Romantique" id="Romantique"/>
-                </label>
+                </label> <br/>
                 <label for="Animaux" class="filtre-animaux">
                     <i class="filtre fas fa-dog"></i> Animaux autorisés <input type="checkbox" name="Animaux" id="Animaux"/>
                 </label>                 
@@ -69,8 +69,55 @@
         </header>
         
         <!--Corp de la maquette-->
-        <div class="flex">
-        <section class="Hebergement_a_marseille">
+        <div class="flex logement">
+            <section class="les_plus_populaire">
+                <h2 class="flex space-between">Les plus populaires
+                <!-- Icone -->
+                <i class="fas fa-chart-line stat"></i></h2>
+            <article class="flex art_populaire">
+                <!-- image -->
+                <img class="imgp" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo chambre Hôtel le soleil du matin"/>
+                <div class="info_chambre">
+                    <h3>Hôtel Le soleil du matin</h3>
+                    <p>Nuit à partir de <em>128€</em></p>
+                    <!--icone x5--> 
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                </div>
+            </article>
+            <article class="flex art_populaire">
+                <!-- image -->
+                <img class="imgp" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo chambre Au coeur de l'eau Chambres d'hôtes"/>
+                <div class="info_chambre">
+                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
+                    <p>Nuit à partir de <em>71€</em></p>
+                    <!--icone x5--> 
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star vide"></i>
+                </div>
+            </article>
+            <article class="flex art_populaire">
+                <!-- image -->
+                <img class="imgp" src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo chambre Hôtel	Tout bleu et Blanc"/>
+                <div class="info_chambre">
+                    <h3>Hôtel Tout bleu et Blanc</h3>
+                    <p>Nuit à partir de <em>68€</em></p>
+                    <!--icone x5--> 
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star rempli"></i>
+                    <i class="fas fa-star vide"></i>
+            </article>
+        </section>
+        
+            <section class="Hebergement_a_marseille">
             <h2 id="hebergement">Hébergements à Marseille</h2>
             <div class="chambre flex">
             <article class="art_hebergement">
@@ -159,53 +206,6 @@
             </article>
             </div>
             <a class="bold" href="#">Afficher plus</a>
-        </section>
-
-        <section class="les_plus_populaire">
-                <h2 class="flex space-between">Les plus populaires
-                <!-- Icone -->
-                <i class="fas fa-chart-line stat"></i></h2>
-            <article class="flex art_populaire">
-                <!-- image -->
-                <img class="imgp" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo chambre Hôtel le soleil du matin"/>
-                <div class="info_chambre">
-                    <h3>Hôtel Le soleil du matin</h3>
-                    <p>Nuit à partir de <em>128€</em></p>
-                    <!--icone x5--> 
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                </div>
-            </article>
-            <article class="flex art_populaire">
-                <!-- image -->
-                <img class="imgp" src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo chambre Au coeur de l'eau Chambres d'hôtes"/>
-                <div class="info_chambre">
-                    <h3>Au coeur de l'eau Chambres d'hôtes</h3>
-                    <p>Nuit à partir de <em>71€</em></p>
-                    <!--icone x5--> 
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star vide"></i>
-                </div>
-            </article>
-            <article class="flex art_populaire">
-                <!-- image -->
-                <img class="imgp" src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo chambre Hôtel	Tout bleu et Blanc"/>
-                <div class="info_chambre">
-                    <h3>Hôtel Tout bleu et Blanc</h3>
-                    <p>Nuit à partir de <em>68€</em></p>
-                    <!--icone x5--> 
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star rempli"></i>
-                    <i class="fas fa-star vide"></i>
-            </article>
         </section>
         </div>
 
