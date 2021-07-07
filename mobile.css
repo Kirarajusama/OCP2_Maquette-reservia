@@ -116,7 +116,7 @@ article
 {
     margin: 10px 10px 10px 10px;
     padding: 6px;
-    border-radius:0px;
+    border-radius:15px;
     background-color: #ffffff;
 }
 
@@ -138,10 +138,11 @@ article
 {
     object-fit: cover;
     object-position: center;
-    height: 200px;
+    height: 150px;
     width: 45%;
     float: left;
     border-radius:15px 0px 0px 15px;
+    margin-right: 5px;
 }
 
 img[class*="imga"]
@@ -215,6 +216,10 @@ img[class*="imga"]
     border: 0px;
 }
 
+.icone
+{
+    margin-top: 50px;
+}
 
 /* En-tête de la maquette */
 .espace
@@ -235,7 +240,7 @@ nav ul a:hover
     color: #0065FC;                         /* couleur du menu au survol */
 }
 
-a[href="#"]
+section a
 {
     width: 100px;
     height: 50px;
@@ -365,7 +370,7 @@ label:hover /* nom filtre au survol */
 }
 .info_chambre
 {
-    width: 200px;
+    width: 100%;
     margin: 0px 5px 5px 5px;
     padding: 1px 1px 1px 1px;
 }
@@ -396,6 +401,7 @@ footer
 footer div
 {
     margin-right: 15%;
+    display: inline-grid;
 }
 
 footer div a
