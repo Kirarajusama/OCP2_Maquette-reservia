@@ -38,6 +38,7 @@
     .space-between
     {
         justify-content: space-between;     /* l'espace entre les élèments et égal*/
+        padding: 15px;
     }
 
     br
@@ -240,7 +241,7 @@
 /* En-tête de la maquette */
     .espace
     {
-        padding: 15px;      /* marge intérieur menu */
+        padding: 30px;      /* marge intérieur menu */
     }
 
     nav ul a 
@@ -320,16 +321,12 @@
 
 
     /* Information recherche */
-     
-
-
-
-
-
-
-
-
-    
+     .plus
+     {
+        padding-top: 45px;
+        padding-left: 20px;
+        font-size: 20px;
+     }
 
     .Hebergement_a_marseille
     {
@@ -340,6 +337,7 @@
         margin: 15px 2% 15px 5px;
         padding: 10px;
     }
+
     .les_plus_populaire
     {
         border:solid 4px #F2F2F2;
@@ -349,6 +347,7 @@
         margin: 15px 5px 15px 5px;
         padding: 10px;
     }
+
     .info_chambre
     {
         width: 200px;
@@ -368,9 +367,14 @@
     }    
     
     .logement
-{
-    flex-direction: row-reverse;
-}
+    {
+        flex-direction: row-reverse;
+    }
+
+    .marseille
+    {
+        margin-top: 30px;
+    }
 
 
 /* Pied de page */
@@ -379,8 +383,8 @@
         border:solid 2px #F2F2F2;
         border-radius:0px 0px 0px 0px;
         background-color: #F2F2F2;
-        padding: 20px;
-
+        padding: 30px;
+        margin-top: 30px;
     }
 
     footer div
