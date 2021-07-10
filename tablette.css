@@ -15,8 +15,8 @@ html
 {
     padding-left: 0px;
     padding-right: 0px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 body
@@ -30,20 +30,21 @@ body
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
-    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: inline-block;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
     /* garantie la mise en page flex sur tout les navigateur */
 }
 
 .space-between
 {
-    justify-content: space-between;     /* l'espace entre les élèments et égal*/
+    justify-content: flex-start;     /* l'espace entre les élèments et égal*/
     padding: 15px;
+    margin: 5px;
 }
 
 br
-{
-    display: none;
+{ 
+    display: block;
 }
 a
 {
@@ -76,12 +77,16 @@ div i
     margin: 0px;
 }
 
-.padding
+.padding        /* espacement nom "image" */
 {
     padding: 15px;
     justify-content: center;
 }
 
+header
+{
+    margin: 0% 10px;
+}
 
 /* Liste */
 ul
@@ -98,8 +103,8 @@ li
 /* Image */
 .logo
 {
-    width:35%;
-    height:auto;      
+    width:100%;
+    height:auto;   
 }
 
 article
@@ -113,9 +118,9 @@ article
 
 .art_hebergement, .art_populaire
 {
-    margin: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 0px;
     padding: 6px;
-    border-radius:15px 15px 15px 15px;
+    border-radius:15px;
     background-color: #ffffff;
 }
 
@@ -137,10 +142,11 @@ article
 {
     object-fit: cover;
     object-position: center;
-    height: 175px;
-    width: 45%;
+    height: 150px;
+    width: 175px;
     float: left;
     border-radius:15px 0px 0px 15px;
+    margin-right: 5px;
     display: flex;
 }
 
@@ -150,28 +156,10 @@ img[class*="imga"]
     object-position: center;
     border-radius: 15px 15px 0px 0px;
     width: 200%;
+    height: 150px;
+    width: 200%;
     margin: 0;
     padding: 0;
-}
-
-.imga10, .imga13        /* image vieux port et parc national des calanques */
-{
-    height: 385px;
-}
-
-.imga11                 /* image fort de pomègues */
-{
-    height: 170px;
-}
-
-.imga12                 /* image iles de frioul */
-{
-    height: 150px;
-}
-
-.imga14, .imga15        /* image notre dame de la garde et parc longchamp */
-{
-    height: 160px;
 }
 
 
@@ -182,7 +170,7 @@ img[class*="imga"]
     border-radius:10px 0px 0px 10px;
     background-color: #F2F2F2;
     color: black;
-    padding: 15px 10px 15px 10px;
+    padding: 15px 15px 15px 15px;
     margin: 0px;
 }
 
@@ -192,7 +180,7 @@ img[class*="imga"]
     border:solid 2px #DEEBFF;
     border-radius:50px 50px 50px 50px;
     background-color: #DEEBFF;
-    margin: 0px 0px 0px 0px;
+    margin: 10px 0px;
     padding: 11px 11px 11px 11px;
 }
 
@@ -200,10 +188,12 @@ img[class*="imga"]
 {
     border:solid 1px #F2F2F2;
     background-color: #ffffff;
-    margin: 10px 10px 10px 10px;
+    margin: 0px 10px 10px 10px;
     padding: 10px 15px 10px 15px;
     border-radius:50px 50px 50px 50px;
     color: #0065FC;
+    float: left;
+    vertical-align: top;
 }
 
 .rempli
@@ -213,7 +203,7 @@ img[class*="imga"]
     border: 0px;
     width: 5px;
     height: 5px;
-    margin: 4%;
+    margin: 10px;
 }
 
 .vide
@@ -223,7 +213,7 @@ img[class*="imga"]
     border: 0px;
     width: 5px;
     height: 5px;
-    margin: 4%;
+    margin: 10px;
 }
 
 .stat
@@ -231,34 +221,76 @@ img[class*="imga"]
     color: black;
     background-color: #F2F2F2;
     border: 0px;
+    position: absolute;
+    right: 30px;
 }
 
 .icone
 {
-margin-top: 75px;
+    margin-top: 50px;
 }
-
 
 /* En-tête de la maquette */
 .espace
 {
-    padding: 30px;      /* marge intérieur menu */
+    padding: 0px 55px 10px 55px;      /* marge intérieur menu */
+    width: 50%;
+}
+
+a[class="espace"]
+{
+    width: 100%;
 }
 
 nav ul a 
 {
     color: black;             /* couleur du menu */
+    border-bottom: 2px solid #F2F2F2;
 }
 
 nav ul a:hover
 {
-    box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
+    box-shadow: 0px 0px #0065FC inset;      /* ombre de bordure du menu au survol */
+    border-bottom: 2px solid #0065FC;
     color: #0065FC;                         /* couleur du menu au survol */
+}
+
+section a
+{
+    width: 100px;
+    height: 50px;
+}
+
+.menu
+{
+    display: flex;
+}
+
+.hebergement
+{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+
+.activite
+{
+    position: absolute;
+    top: 90px;
+    right: 0px;
+}
+
+.inscription
+{
+    position: absolute;
+    top: 30px;
+    right: -30px;
 }
 
 #inscription
 {
     color: #0065FC;       /* couleur de l'inscrption */
+    border-bottom: 0px solid #0065FC;
 }
 
 
@@ -268,34 +300,50 @@ nav ul a:hover
     border:solid 2px #F2F2F2;
     border-radius:0px 0px 0px 0px;
     margin: 0px -5px 0px -5px;
-    padding: 15px 10px 15px 10px;
+    padding: 15px 20px 15px 20px;
 }
 
 button /* bouton de recherche */
 {
     border:solid 1px #0065FC;
-    border-radius:0px 10px 10px 0px;
+    border-radius: 10px;;
     background-color: #0065FC;
     color : #F2F2F2;
-    padding: 15px 10px 15px 10px;
+    padding: 15px 15px 15px 15px;
     cursor: pointer;
     margin: 0px;
 }
 
-.recherche-m
+.recherche
+{
+    text-align: center;
+}
+
+.recherche-o
 {
     display: none;
+}
+
+.recherche-m
+{
+    display: inline;
 }
 
 H1
 {
 margin-top: 19px;
 margin-bottom: 5px;
+padding-top: 50px;
 }
 
 H1+p
 {
     margin-top: 5px;
+}
+
+.texte
+{
+    margin-top: 25px;
 }
 
 /* Filtres */
@@ -327,36 +375,28 @@ label:hover /* nom filtre au survol */
 
 
 /* Information recherche */
- .plus
- {
-    padding-top: 45px;
-    padding-left: 20px;
-    font-size: 20px;
- }
 
 .Hebergement_a_marseille
 {
-    border:solid 4px #F2F2F2;
-    border-radius:15px 15px 15px 15px;
-    background-color: #F2F2F2;
-    width: 66%;
-    margin: 15px 2% 15px 5px;
+    border:solid 4px #ffffff;
+    border-radius:0px;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 15px 0px 15px 0px;
     padding: 10px;
 }
-
 .les_plus_populaire
 {
     border:solid 4px #F2F2F2;
-    border-radius:15px 15px 15px 15px;
+    border-radius:0px;
     background-color: #F2F2F2;
-    width: 30%;
-    margin: 15px 5px 15px 5px;
+    width: 100%;
+    margin: 15px 0px 15px 0px;
     padding: 10px;
 }
-
 .info_chambre
 {
-    width: 200px;
+    width: 100%;
     margin: 0px 5px 5px 5px;
     padding: 1px 1px 1px 1px;
 }
@@ -370,18 +410,17 @@ label:hover /* nom filtre au survol */
 .chambre
 {
     flex-wrap: wrap;
-}    
+} 
 
-.logement
+.plus
 {
-    flex-direction: row-reverse;
+    padding-top: 25px;
 }
 
 .marseille
 {
-    margin-top: 30px;
+    margin: 5px 10px;
 }
-
 
 /* Pied de page */
 footer
@@ -389,13 +428,15 @@ footer
     border:solid 2px #F2F2F2;
     border-radius:0px 0px 0px 0px;
     background-color: #F2F2F2;
-    padding: 30px;
-    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
+    margin: 5px;
 }
 
 footer div
 {
     margin-right: 15%;
+    display: inline-grid;
 }
 
 footer div a
@@ -404,6 +445,6 @@ footer div a
 }
 
 strong
-{
-    font-weight:bold;
-}
+    {
+        font-weight:bold;
+    }
