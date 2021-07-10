@@ -141,6 +141,7 @@
         width: 45%;
         float: left;
         border-radius:15px 0px 0px 15px;
+        display: flex;
     }
 
     img[class*="imga"]
@@ -281,6 +282,11 @@
         margin: 0px;
     }
 
+    .recherche-m
+    {
+        display: none;
+    }
+
     H1
     {
     margin-top: 19px;
@@ -395,6 +401,11 @@
     footer div a
     {
         color: black;
+    }
+
+    strong
+    {
+        font-weight:bold;
     }
 
     
