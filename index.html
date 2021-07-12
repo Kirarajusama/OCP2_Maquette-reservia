@@ -8,7 +8,7 @@
         <!-- Fichier CSS -->
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" media="screen and (max-width: 375px)" href="mobile.css"/>
-        <link rel="stylesheet" media="screen and (max-width: 800px)" href="tablette.css"/>
+        <link rel="stylesheet" media="screen and (max-width: 775px)" href="tablette.css"/>
         <!-- Police -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             
                 <!-- Menu -->
                 <nav>
-                    <ul class="flex">
+                    <ul class="flex liste">
                         <li class="hebergement"><a class="espace" href="#hebergement">Hébergements</a></li>
                         <li class="activite"><a class="espace" href="#activite">Activités</a></li>
                         <li class="inscription"><a class="espace bold" id= "inscription" href="#">S'inscrire</a></li>
@@ -50,7 +50,7 @@
 
             <!-- Filtres -->
             <p class="Filtres bold">
-                Filtres <br/> 
+                Filtres <br class="tablettenone"/> 
                 <label for="Economique" class="filtre-economie">
                     <i class="filtre fas fa-money-bill-wave"></i> Economique <input type="checkbox" name="Economique" id="Economique"/>
                 </label>
@@ -59,7 +59,7 @@
                 </label> <br/>
                 <label for="Romantique" class="filtre-romantique">
                     <i class="filtre fas fa-heart"></i> Romantique <input type="checkbox" name="Romantique" id="Romantique"/>
-                </label> <br/>
+                </label> <br class="tablettenone"/>
                 <label for="Animaux" class="filtre-animaux">
                     <i class="filtre fas fa-dog"></i> Animaux autorisés <input type="checkbox" name="Animaux" id="Animaux"/>
                 </label>                 
@@ -68,17 +68,19 @@
             <!-- information sur le résultat de la recherche -->
             <p>
                 <!-- icone --> <i class="i fas fa-info"></i>
-                <div class="texte"> Plus de 500 logements sont disponibles dans cette ville </div>
+                Plus de 500 logements sont disponibles dans cette ville
             </p>
+
+
         </header>
-        
         <!--Corp de la maquette-->
         <div class="flex logement">
             <section class="les_plus_populaire">
                 <h2 class="flex space-between">Les plus populaires
                 <!-- Icone -->
                 <i class="fas fa-chart-line stat"></i></h2>
-            <article class="art_populaire">
+            <div class="chambre">
+                <article class="art_populaire">
                 <!-- image -->
                 <img class="imgp" src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo chambre Hôtel le soleil du matin"/>
                 <div class="info_chambre">
@@ -122,6 +124,7 @@
                         <i class="fas fa-star vide"></i>
                     </div>
             </article>
+            </div>
         </section>
         
             <section class="Hebergement_a_marseille">
@@ -220,40 +223,40 @@
 
         <section class="marseille">
             <h2 id="activite">Activités à Marserille</h2>
-        <div class="flex">
+        <div class="flex activite-m">
             <div class="Image1">
-            <article>
+            <article class="art_activite100">
                 <!-- image -->
                 <img class="imga10" src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo Vieux Port"/>
                 <h3 class="padding">Vieux Port</h3>
             </article>
             </div>
             <div class="Image2&3">
-            <article>
+            <article class="art_activite50">
                 <!-- image -->
                 <img class="imga11" src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo Fort de Pomègues"/>
                 <h3 class="padding">Fort de Pomègues</h3>
             </article>
-            <article>
+            <article class="art_activite50">
                 <!-- image -->
                 <img class="imga12" src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo Îles du Frioul"/>
                 <h3 class="padding">Îles du Frioul</h3>
             </article>
             </div>
             <div class="Image4">
-            <article>
+            <article class="art_activite100">
                 <!-- image -->
                 <img class="imga13" src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo Parc National Des Calanques"/>
                 <h3 class="padding">Parc National des Calanques</h3>
             </article>
             </div>
             <div class="Image5&6">
-            <article>
+            <article class="art_activite50">
                 <!-- image -->
                 <img class="imga14" src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo Notre-Dame-de-la-Garde"/>
                 <h3 class="padding">Notre-Dame-de-la-Garde</h3>
             </article>
-            <article>
+            <article class="art_activite50">
                 <!-- image -->
                 <img class="imga15" src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo Parc Longchamp"/>
                 <h3 class="padding">Parc Longchamp</h3>
@@ -271,14 +274,14 @@
                     <li> <a href="#">Conditions générales de vente</a> </li>
                     <li> <a href="#">Données et confidentialité</a> </li>
                 </ul>                 
-            </div>  <br/>
+            </div>  <br class="tablettenone"/>
             <div>
                 <a href="#"> <strong>Nos hébergements</strong> </a>
                 <ul>
                     <li> <a href="#">Charte qualité</a> </li>
                     <li> <a href="#">Soumettre votre hôtel</a> </li>
                 </ul>                 
-            </div>  <br/>
+            </div>  <br class="tablettenone"/>
             <div>
                 <a href="#"> <strong>Assistance</strong> </a>
                 <ul>

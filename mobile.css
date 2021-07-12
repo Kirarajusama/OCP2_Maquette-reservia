@@ -46,6 +46,7 @@ br
 { 
     display: block;
 }
+
 a
 {
     text-decoration: none;      /* Annulation des décoration de lien */
@@ -341,10 +342,6 @@ H1+p
     margin-top: 5px;
 }
 
-.texte
-{
-    margin-top: 25px;
-}
 
 /* Filtres */
 input[type="checkbox"]

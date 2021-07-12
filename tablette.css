@@ -30,14 +30,14 @@ body
     display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
     display: -ms-flexbox;      /* TWEENER - IE 10 */
     display: -webkit-flex;     /* NEW - Chrome */
-    display: inline-block;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
 
     /* garantie la mise en page flex sur tout les navigateur */
 }
 
 .space-between
 {
-    justify-content: flex-start;     /* l'espace entre les élèments et égal*/
+    justify-content: space-between;     /* l'espace entre les élèments et égal*/
     padding: 15px;
     margin: 5px;
 }
@@ -46,6 +46,10 @@ br
 { 
     display: block;
 }
+
+.tablettenone
+{display: none;}
+
 a
 {
     text-decoration: none;      /* Annulation des décoration de lien */
@@ -122,12 +126,28 @@ article
     padding: 6px;
     border-radius:15px;
     background-color: #ffffff;
+    width: 30%;
 }
 
 .art_hebergement
 {
-    flex: 1;
+    flex: none;
 }   
+
+.art_activite100
+{
+    width: 700px;
+}
+
+.art_activite50
+{
+    width: 335px;
+}
+
+.logement
+{
+    display: block;
+}
 
 .imgh       /*image hébergelent à marseille */
 {
@@ -143,9 +163,9 @@ article
     object-fit: cover;
     object-position: center;
     height: 150px;
-    width: 175px;
-    float: left;
-    border-radius:15px 0px 0px 15px;
+    width: 100%;
+    float: none;
+    border-radius:15px 15px 0px 0px;
     margin-right: 5px;
     display: flex;
 }
@@ -157,7 +177,6 @@ img[class*="imga"]
     border-radius: 15px 15px 0px 0px;
     width: 200%;
     height: 150px;
-    width: 200%;
     margin: 0;
     padding: 0;
 }
@@ -227,7 +246,8 @@ img[class*="imga"]
 
 .icone
 {
-    margin-top: 50px;
+    margin-top: 0px;
+    align-items: flex-end;
 }
 
 /* En-tête de la maquette */
@@ -268,23 +288,17 @@ section a
 
 .hebergement
 {
-    position: absolute;
-    top: 90px;
-    left: 0px;
+    position: initial;
 }
 
 .activite
 {
-    position: absolute;
-    top: 90px;
-    right: 0px;
+    position: initial;
 }
 
 .inscription
 {
-    position: absolute;
-    top: 30px;
-    right: -30px;
+    position: initial;
 }
 
 #inscription
@@ -333,7 +347,7 @@ H1
 {
 margin-top: 19px;
 margin-bottom: 5px;
-padding-top: 50px;
+padding-top: 0px;
 }
 
 H1+p
@@ -341,10 +355,6 @@ H1+p
     margin-top: 5px;
 }
 
-.texte
-{
-    margin-top: 25px;
-}
 
 /* Filtres */
 input[type="checkbox"]
@@ -409,7 +419,9 @@ label:hover /* nom filtre au survol */
 
 .chambre
 {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 } 
 
 .plus
@@ -420,6 +432,17 @@ label:hover /* nom filtre au survol */
 .marseille
 {
     margin: 5px 10px;
+}
+
+div[class*="Image"]
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.activite-m
+{
+    flex-wrap: wrap;
 }
 
 /* Pied de page */
