@@ -437,7 +437,6 @@ label:hover /* nom filtre au survol */
 div[class*="Image"]
 {
     display: flex;
-    flex-direction: row;
 }
 
 .activite-m

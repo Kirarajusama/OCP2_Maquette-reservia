@@ -121,7 +121,7 @@
 
     .art_hebergement
     {
-        flex: 1;
+        width: 30%;
     }   
 
     .imgh       /*image hébergelent à marseille */
@@ -356,7 +356,7 @@
 
     .info_chambre
     {
-        width: 200px;
+        width: 100%;
         margin: 0px 5px 5px 5px;
         padding: 1px 1px 1px 1px;
     }
