@@ -6,6 +6,14 @@
     box-sizing         : border-box;        /* evite le dépacement */
 }  
 
+@media (max-width: 768px)
+{
+    body
+    {
+        width: auto;
+    }
+}
+
 html 
 {   
     font-family : 'Raleway', sans-serif ;       /* police écriture site */
@@ -330,17 +338,17 @@ button /* bouton de recherche */
 
 .recherche
 {
-    text-align: center;
+    text-align: start;
 }
 
 .recherche-o
 {
-    display: none;
+    display: inline;
 }
 
 .recherche-m
 {
-    display: inline;
+    display: none;
 }
 
 H1
