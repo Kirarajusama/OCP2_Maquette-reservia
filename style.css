@@ -1,411 +1,1137 @@
 /* Global */
-    * 
-    {
-        -moz-box-sizing    : border-box;        /* Firefox */
-        -webkit-box-sizing : border-box;        /* Safari */
-        box-sizing         : border-box;        /* evite le dépacement */
-    }  
+* 
+{
+    -moz-box-sizing    : border-box;        /* Firefox */
+    -webkit-box-sizing : border-box;        /* Safari */
+    box-sizing         : border-box;        /* evite le dépacement */
+}
 
-    html 
-    {   
-        font-family : 'Raleway', sans-serif ;       /* police écriture site */
-    }
 
-    .contenaire
-    {
-        padding-left: 0px;
-        padding-right: 0px;
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    body
-    {
-        margin: 0px;        /* annulation marge extérieur automatique*/
-    }
-
-    .flex
-    {
-        display: -webkit-box;       /* OLD - iOS 6-, Safari 3.1-6 */
-        display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-        display: -ms-flexbox;      /* TWEENER - IE 10 */
-        display: -webkit-flex;     /* NEW - Chrome */
-        display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
-        /* garantie la mise en page flex sur tout les navigateur */
-    }
-
-    .space-between
-    {
-        justify-content: space-between;     /* l'espace entre les élèments et égal*/
-        padding: 15px;
-    }
-
-    br
-    {
-        display: none;
-    }
-    a
-    {
-        text-decoration: none;      /* Annulation des décoration de lien */
-        color: black;             /* Couleur des lien */
-    }
-
-    img 
+html, body
+{   
+    font-family : 'Raleway', sans-serif ;       /* police écriture site */
+    margin: 0;        /* annulation marge extérieur automatique */
+    padding: 0;
+}
+/*img 
     { 
-        max-width: 100%;        /* Taille maximum de l'image */
-    }
+       /* max-width: 100%;        /* Taille maximum de l'image
+    }*/
+a
+{
+    text-decoration: none;      /* Annulation des décoration de lien */
+    color: black;             /* Couleur des lien */
+}
 
-    .bold, h1, h2, h3, strong
+/* liste */
+ul
+{
+    padding:0 ;       /*marge intérieur des listes */
+}
+li
+{
+    list-style-type: none;      /* suppression des puces des listes */
+}
+
+
+
+
+
+
+.row
+{
+    display: -webkit-box;       /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+    /* garantie la mise en page flex sur tout les navigateur */
+}
+
+
+.space-between
+{
+    justify-content: space-between;     /* l'espace entre les élèments et égal*/
+}
+
+h2
+{
+    font-weight: bolder;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+h3
+{
+    font-weight: bolder;
+    margin: 0px;
+}
+strong
+{
+    font-weight: bolder;
+}
+p
+{
+    margin: 5px;
+}
+.info_chambre
+{
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/*Mobile*/
+/* header*/
+header
+{
+    padding-left: 15px;
+}
+.menu
+{
+    padding: 15px;
+}
+.logo
+{
+    height:50px;      
+}
+
+.hebergement
+{
+    position: absolute;
+    top: 90px;
+    left: 0px;
+}
+.activite
+{
+    position: absolute;
+    top: 90px;
+    right: 0px;
+}
+.inscription
+{
+    position: absolute;
+    top: 30px;
+    right: -10px;
+}
+
+.liste
+{
+    margin-bottom: 20px;
+}
+.espace
+{
+    padding: 0px 55px 10px 55px;      /* marge intérieur menu */
+    width: 50%;
+}
+nav ul a 
+{
+    color: black;             /* couleur du menu */
+    border-bottom: 2px solid #F2F2F2;
+}    
+nav ul a:hover
+{
+    border-bottom: 2px solid #0065FC;
+    color: #0065FC;
+}
+#inscription
+{
+    color: #0065FC;       /* couleur de l'inscrption */
+    font-weight: bolder;
+    border-bottom: 0px solid #F2F2F2;
+}
+i
+{
+    color: #F2F2F2;
+}
+
+h1
+{
+    margin-top: 50px;
+}
+/* barre de recherche */
+.recherche
+{
+    margin-left: 50px;
+    margin-top: 25px;
+}
+.lieu
+{
+    color: black;
+    border:solid 1px #F2F2F2;
+    border-radius:10px 0 0 10px;
+    background-color: #F2F2F2;
+    padding: 15px 10px 15px 10px;
+}
+input /* barre d'écriture*/
+{
+    border:solid 2px #F2F2F2;
+    border-radius:0px 0px 0px 0px;
+    margin: 0px -5px 0px -5px;
+    padding: 15px 10px 15px 10px;
+
+}
+button /* bouton de recherche */
+{
+    border:solid 1px #0065FC;
+    border-radius:10px;
+    background-color: #0065FC;
+    color : #F2F2F2;
+    padding: 15px 10px 15px 10px;
+    cursor: pointer;
+    margin: 0px;
+}
+.texte
+{
+    display: none;
+}
+/* filtres */
+.titre
+{
+    font-weight: bolder;
+}
+.filtre
+{
+    color: #0065FC;
+    border:solid 2px #DEEBFF;
+    border-radius:50px;
+    background-color: #DEEBFF;
+    padding: 11px;
+    margin-top: 15px;
+}
+.box-filtre
+{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+.box-filtre input[type="checkbox"]
+{
+    display: none;
+}
+.box-filtre label /* nom filtre */
+{
+    border:solid 3px #F2F2F2;
+    max-width: 10px;
+    max-height: 10px;
+    border-radius:50px 50px 50px 50px;
+    font-weight:bolder;
+    padding: 10px 10px 10px 0px;
+    margin: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+.box-filtre label:hover /* nom filtre au survol */
+{
+    border:solid 3px #F2F2F2;
+    border-radius:50px 50px 50px 50px;
+    font-weight:bolder;
+    background-color: #F2F2F2;
+    padding: 10px 10px 10px 0px;
+}
+/* info réseultat recherche */
+.information
+{
+    margin-top: 25px;
+    display: flex;
+}
+.i
+{
+    color: #0065FC;
+    border: solid 1px #F2F2F2;
+    border-radius: 50px;
+    padding: 7px 12px 7px 12px;;
+    margin-left: 25px;
+    margin-right: 15px;
+    font-size: 12px;
+}
+.ligne
+{
+    margin-top: 5px;
+}
+
+
+
+
+
+/* body */
+.logement
+{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 103%;
+}
+/*étoile*/
+.fa-star
+{
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    align-self: flex-end;
+}
+.rempli
+{
+    color: #0065FC;
+}
+
+/*les plus populaires*/
+.les_plus_populaire
     {
-    font-weight: bold;      /* mise en gras de l'inscription */
-    }
-
-    h3
-    {
-        margin: 0px;
-    }
-
-    div p
-    {
-        margin: 0px;
-    }
-
-    div i
-    {
-        margin: 0px;
-    }
-
-    .padding
-    {
-        padding: 15px;
-        justify-content: center;
-    }
-
-
-/* Liste */
-    ul
-    {
-        padding:0px ;       /*marge intérieur des listes */
-    }
-
-    li
-    {
-        list-style-type: none;      /* suppression des puces des listes */
-    }
-
-
-/* Image */
-    .logo
-    {
-        width:35%;
-        height:auto;      
-    }
-
-    article
-    {
-        margin: 15px;
-        border-radius:15px 15px 15px 15px;
-        background-color: #ffffff;
-        box-shadow: 1px 1px 10px #b9b9b3;
-    }
-
-
-    .art_hebergement, .art_populaire
-    {
-        margin: 10px 10px 10px 10px;
-        padding: 6px;
-        border-radius:15px 15px 15px 15px;
-        background-color: #ffffff;
-    }
-
-    .art_hebergement
-    {
-        width: 30%;
-    }   
-
-    .imgh       /*image hébergelent à marseille */
-    {
-        object-fit: cover;          /* ajustement image */
-        object-position: center;
-        height: 150px;
-        width: 200%;
-        border-radius:15px 15px 0px 0px;
-    }
-
-    .imgp       /* image les plus populaire */
-    {
-        object-fit: cover;
-        object-position: center;
-        height: 175px;
-        width: 45%;
-        float: left;
-        border-radius:15px 0px 0px 15px;
-        display: flex;
-    }
-
-    img[class*="imga"]
-    {
-        object-fit: cover;
-        object-position: center;
-        border-radius: 15px 15px 0px 0px;
-        width: 200%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .imga10, .imga13        /* image vieux port et parc national des calanques */
-    {
-        height: 385px;
-    }
-
-    .imga11                 /* image fort de pomègues */
-    {
-        height: 170px;
-    }
-
-    .imga12                 /* image iles de frioul */
-    {
-        height: 150px;
-    }
-
-    .imga14, .imga15        /* image notre dame de la garde et parc longchamp */
-    {
-        height: 160px;
-    }
-    
-
-/* icone */
-    .lieu
-    {
-        border:solid 1px #F2F2F2;
-        border-radius:10px 0px 0px 10px;
         background-color: #F2F2F2;
-        color: black;
-        padding: 15px 10px 15px 10px;
-        margin: 0px;
-    }
-
-    .filtre
-    {
-        color: #0065FC;
-        border:solid 2px #DEEBFF;
-        border-radius:50px 50px 50px 50px;
-        background-color: #DEEBFF;
-        margin: 0px 0px 0px 0px;
-        padding: 11px 11px 11px 11px;
-    }
-
-    .i
-    {
-        border:solid 1px #F2F2F2;
-        background-color: #ffffff;
-        margin: 10px 10px 10px 10px;
-        padding: 10px 15px 10px 15px;
-        border-radius:50px 50px 50px 50px;
-        color: #0065FC;
-    }
-
-    .rempli
-    {
-        color: #0065FC;
-        background-color: #ffffff;
-        border: 0px;
-        width: 5px;
-        height: 5px;
-        margin: 4%;
-    }
-
-    .vide
-    {
-        color: #F2F2F2;
-        background-color: #ffffff;
-        border: 0px;
-        width: 5px;
-        height: 5px;
-        margin: 4%;
-    }
-
-    .stat
-    {
-        color: black;
-        background-color: #F2F2F2;
-        border: 0px;
-    }
-
-    .icone
-    {
-    margin-top: 75px;
-    }
-
-
-/* En-tête de la maquette */
-    .espace
-    {
-        padding: 30px;      /* marge intérieur menu */
-    }
-
-    nav ul a 
-    {
-        color: black;             /* couleur du menu */
-    }
-    
-    nav ul a:hover
-    {
-        box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
-        color: #0065FC;                         /* couleur du menu au survol */
-    }
-
-    #inscription
-    {
-        color: #0065FC;       /* couleur de l'inscrption */
-    }
-
-
-    /* Barre de recherche */
-        input /* barre d'écriture*/
-    {
-        border:solid 2px #F2F2F2;
-        border-radius:0px 0px 0px 0px;
-        margin: 0px -5px 0px -5px;
-        padding: 15px 10px 15px 10px;
-    }
-
-    button /* bouton de recherche */
-    {
-        border:solid 1px #0065FC;
-        border-radius:0px 10px 10px 0px;
-        background-color: #0065FC;
-        color : #F2F2F2;
-        padding: 15px 10px 15px 10px;
-        cursor: pointer;
-        margin: 0px;
-    }
-
-    .recherche-m
-    {
-        display: none;
-    }
-
-    H1
-    {
-    margin-top: 19px;
-    margin-bottom: 5px;
-    }
-
-    H1+p
-    {
-        margin-top: 5px;
-    }
-
-    /* Filtres */
-    input[type="checkbox"]
-    {
-        opacity: 0;
-    }
-
-    label /* nom filtre */
-    {
-        border:solid 3px #F2F2F2;
-        max-width: 10px;
-        max-height: 10px;
-        border-radius:50px 50px 50px 50px;
-        font-weight:bold;
-        padding: 10px 10px 10px 0px;
-        margin: 0px 10px 0px 10px;
-        cursor: pointer;
-    }
-
-    label:hover /* nom filtre au survol */
-    {
-        border:solid 3px #F2F2F2;
-        border-radius:50px 50px 50px 50px;
-        font-weight:bold;
-        background-color: #F2F2F2;
-        padding: 10px 10px 10px 0px;
-    }
-
-
-    /* Information recherche */
-     .plus
-     {
-        padding-top: 45px;
-        padding-left: 20px;
-        font-size: 20px;
-     }
-
-    .Hebergement_a_marseille
-    {
-        border:solid 4px #F2F2F2;
-        border-radius:15px 15px 15px 15px;
-        background-color: #F2F2F2;
-        width: 66%;
-        margin: 15px 2% 15px 5px;
-        padding: 10px;
-    }
-
-    .les_plus_populaire
-    {
-        border:solid 4px #F2F2F2;
-        border-radius:15px 15px 15px 15px;
-        background-color: #F2F2F2;
-        width: 30%;
-        margin: 15px 5px 15px 5px;
-        padding: 10px;
-    }
-
-    .info_chambre
-    {
         width: 100%;
-        margin: 0px 5px 5px 5px;
-        padding: 1px 1px 1px 1px;
+        margin: 15px 0px 15px 0px;
+        padding: 10px 20px 10px 20px ;
     }
+.stat
+{
+    color: black;
+}
+.art_populaire
+{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px #B9B9B3;
+    height: 150px;
+    margin-bottom: 15px;
+}
+.imgp
+{
+    width: 40%;
+    height: 140px;
+    margin: 5px;
+    border-radius: 15px 0px 0px 15px;
+    float: left;
+    object-fit: cover;
+    object-position: center;
+}
+/*hébergement a marseille*/
+.Hebergement_a_marseille
+{
+    border-radius:15px 15px 15px 15px;
+    width: 100%;
+    margin: 15px;
+    padding: 10px;
+}
+.art_hebergement
+{
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px #F2F2F2;
+    width: 100%;
+    height: 200px;
+    margin: 10px;
+}
+.imgh
+{
+    width: 100%;
+    height: 50%;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    object-position: center;
+}
 
-    .en-tête
-    {
-        color: black;
-        background-color: #F2F2F2;
-    }
+.plus
+{
+    padding: 10px;
+    font-weight: bolder;
+}
+/*activités a marseille*/
+.marseille
+{
+    margin: 15px;
+}
 
-    .chambre
-    {
-        flex-wrap: wrap;
-    }    
-    
-    .logement
-    {
-        flex-direction: row-reverse;
-    }
+.Image1, .Image2_3, .Image4, .Image5_6
+{
+    width: 100%;
+}
 
-    .marseille
-    {
-        margin-top: 30px;
-    }
+.art_activite
+{
+    width: 95%;
+    box-shadow: 1px 1px 10px #F2F2F2;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.art12
+{
+    margin-top: 10px;
+}
+
+.art15
+{
+    margin-top: 10px;
+}
+
+.imga10
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga11
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga12
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga13
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga14
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga15
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.padding
+{
+    padding: 15px 0px 15px 10px;
+}
 
 
-/* Pied de page */
-    footer
+
+
+/* footer */
+footer
     {
         border:solid 2px #F2F2F2;
-        border-radius:0px 0px 0px 0px;
+        border-radius:0;
+        background-color: #F2F2F2;
+        padding: 30px;
+        margin-top: 30px;
+        width: 105%;
+    }
+
+footer div
+{
+    margin-right: 50px;
+}
+.puce
+{
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+/* tablette */
+@media (min-width: 768px)
+{
+        .contenaire
+        {
+            padding-left: 0;
+            padding-right: 0;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        /* hearder*/
+        
+        .menu
+        {
+            padding: 15px;
+        }
+        .logo
+        {
+            height:64px;      
+        }
+        .espace
+        {
+            padding: 30px;      /* marge intérieur menu */
+        }
+        nav ul a 
+        {
+            color: black;             /* couleur du menu */
+            border-bottom: 0px solid #F2F2F2;
+        }    
+        nav ul a:hover
+        {
+            box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
+            color: #0065FC;                         /* couleur du menu au survol */
+            border-bottom: 0px solid #F2F2F2;
+        }
+        
+        .hebergement
+        {
+            position:initial;
+        }
+        .activite
+        {
+            position: initial;
+        }
+        .inscription
+        {
+            position: initial;
+        }
+        
+        #inscription
+        {
+            color: #0065FC;       /* couleur de l'inscrption */
+            font-weight: bolder;
+        }
+        i
+        {
+            color: #F2F2F2;
+        }
+        br
+        {
+            display: none;
+        }
+        
+        h1
+        {
+            margin-top: 20px;
+            margin-bottom: 2px;
+        }
+        /* barre de recherche */
+        .recherche
+        {
+            margin-top: 10px;
+        }
+        .lieu
+        {
+            color: black;
+            border:solid 1px #F2F2F2;
+            border-radius:10px 0 0 10px;
+            background-color: #F2F2F2;
+            padding: 15px 10px 15px 10px;
+        }
+        input /* barre d'écriture*/
+        {
+            border:solid 2px #F2F2F2;
+            border-radius:0px 0px 0px 0px;
+            margin: 0px -5px 0px -5px;
+            padding: 15px 10px 15px 10px;
+        }
+        button /* bouton de recherche */
+        {
+            border:solid 1px #0065FC;
+            border-radius:0px 10px 10px 0px;
+            background-color: #0065FC;
+            color : #F2F2F2;
+            padding: 15px 10px 15px 10px;
+            cursor: pointer;
+            margin: 0px;
+        }
+        .fa-search
+        {
+            display: none;
+        }
+        .texte
+        {
+            display: block;
+        }
+        /* filtres */
+        .filtre
+        {
+            color: #0065FC;
+            border:solid 2px #DEEBFF;
+            border-radius:50px;
+            background-color: #DEEBFF;
+            padding: 11px;
+        }
+        .box-filtre
+        {
+            margin-top: 20px;
+            margin-left: 5px;
+        }
+        .box-filtre input[type="checkbox"]
+        {
+            display: none;
+        }
+        .box-filtre label /* nom filtre */
+        {
+            border:solid 3px #F2F2F2;
+            max-width: 10px;
+            max-height: 10px;
+            border-radius:50px 50px 50px 50px;
+            font-weight:bolder;
+            padding: 10px 10px 10px 0px;
+            margin: 0px 0px 0px 5px;
+            cursor: pointer;
+        }
+        .box-filtre label:hover /* nom filtre au survol */
+        {
+            border:solid 3px #F2F2F2;
+            border-radius:50px 50px 50px 50px;
+            font-weight:bolder;
+            background-color: #F2F2F2;
+            padding: 10px 10px 10px 0px;
+        }
+        /* info réseultat recherche */
+        .i
+        {
+            color: #0065FC;
+            border: solid 1px #F2F2F2;
+            border-radius: 50px;
+            padding: 10px 15px 10px 15px;
+        }
+        
+        
+        
+        
+        
+        /* body */
+        .logement
+        {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        /*étoile*/
+        .fa-star
+        {
+            width: 5px;
+            height: 5px;
+            margin: 5px;
+            align-self: flex-end;
+        }
+        .rempli
+        {
+            color: #0065FC;
+        }
+        
+        /*les plus populaires*/
+        .les_plus_populaire
+            {
+                border:solid 4px #F2F2F2;
+                border-radius:15px 15px 15px 15px;
+                background-color: #F2F2F2;
+                width: 100%;
+                margin: 5px;
+                padding: 10px;
+            }
+        .stat
+        {
+            color: black;
+        }
+        .art_populaire
+        {
+            border-radius: 15px;
+            background-color: #FFFFFF;
+            box-shadow: 1px 1px 10px #B9B9B3;
+            height: 150px;
+            margin: 5px;
+        }
+        .imgp
+        {
+            width: 33%;
+            height: 140px;
+            margin: 5px;
+            border-radius: 15px 0px 0px 15px;
+            float: left;
+            object-fit: cover;
+            object-position: center;
+        }
+        /*hébergement a marseille*/
+        .Hebergement_a_marseille
+        {
+            border:solid 4px #F2F2F2;
+            border-radius:15px 15px 15px 15px;
+            background-color: #F2F2F2;
+            width: 100%;
+            margin: 5px;
+            padding: 10px;
+        }
+        .art_hebergement
+        {
+            border-radius: 15px;
+            background-color: #FFFFFF;
+            box-shadow: 1px 1px 10px #B9B9B3;
+            width: 45%;
+            height: 200px;
+            margin: 10px 15px 10px 15px;
+        }
+        .imgh
+        {
+            width: 100%;
+            height: 50%;
+            padding : 5px;
+            border-radius: 15px 15px 0px 0px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        .plus
+        {
+            padding: 10px;
+            font-weight: bolder;
+        }
+        /*activités a marseille*/
+        .marseille
+{
+    margin: 15px;
+}
+
+.Image1, .Image2_3, .Image4, .Image5_6
+{
+    width: 50%;
+}
+
+.art_activite
+{
+    width: 95%;
+    box-shadow: 1px 1px 10px #F2F2F2;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.art12
+{
+    margin-top: 10px;
+}
+
+.art15
+{
+    margin-top: 10px;
+}
+
+.imga10
+{
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga11
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga12
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga13
+{
+    width: 100%;
+    height: 335px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga14
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga15
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.padding
+{
+    padding: 15px 0px 15px 10px;
+}
+        
+        
+        
+        
+        /* footer */
+        footer
+            {
+                border:solid 2px #F2F2F2;
+                border-radius:0;
+                background-color: #F2F2F2;
+                justify-content: space-between;
+                margin-top: 30px;
+            }
+        .puce
+        {
+            padding: 5px;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+/* ordinateur */
+@media (min-width: 1170px) 
+{
+.contenaire
+{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+/* hearder*/
+
+.menu
+{
+    padding: 15px;
+}
+.logo
+{
+    height:64px;      
+}
+.espace
+{
+    padding: 30px;      /* marge intérieur menu */
+}
+nav ul a 
+{
+    color: black;             /* couleur du menu */
+    border-bottom: 0px solid #F2F2F2;
+}    
+nav ul a:hover
+{
+    box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
+    color: #0065FC;                         /* couleur du menu au survol */
+    border-bottom: 0px solid #F2F2F2;
+}
+
+.hebergement
+{
+    position:initial;
+}
+.activite
+{
+    position: initial;
+}
+.inscription
+{
+    position: initial;
+}
+
+#inscription
+{
+    color: #0065FC;       /* couleur de l'inscrption */
+    font-weight: bolder;
+}
+i
+{
+    color: #F2F2F2;
+}
+br
+{
+    display: none;
+}
+
+h1
+{
+    margin-top: 20px;
+    margin-bottom: 2px;
+}
+/* barre de recherche */
+.recherche
+{
+    margin-top: 10px;
+}
+.lieu
+{
+    color: black;
+    border:solid 1px #F2F2F2;
+    border-radius:10px 0 0 10px;
+    background-color: #F2F2F2;
+    padding: 15px 10px 15px 10px;
+}
+input /* barre d'écriture*/
+{
+    border:solid 2px #F2F2F2;
+    border-radius:0px 0px 0px 0px;
+    margin: 0px -5px 0px -5px;
+    padding: 15px 10px 15px 10px;
+}
+button /* bouton de recherche */
+{
+    border:solid 1px #0065FC;
+    border-radius:0px 10px 10px 0px;
+    background-color: #0065FC;
+    color : #F2F2F2;
+    padding: 15px 10px 15px 10px;
+    cursor: pointer;
+    margin: 0px;
+}
+.fa-search
+{
+    display: none;
+}
+.texte
+{
+    display: block;
+}
+/* filtres */
+.filtre
+{
+    color: #0065FC;
+    border:solid 2px #DEEBFF;
+    border-radius:50px;
+    background-color: #DEEBFF;
+    padding: 11px;
+}
+.box-filtre
+{
+    margin-top: 20px;
+}
+.box-filtre input[type="checkbox"]
+{
+    display: none;
+}
+.box-filtre label /* nom filtre */
+{
+    border:solid 3px #F2F2F2;
+    max-width: 10px;
+    max-height: 10px;
+    border-radius:50px 50px 50px 50px;
+    font-weight:bolder;
+    padding: 10px 10px 10px 0px;
+    margin: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+.box-filtre label:hover /* nom filtre au survol */
+{
+    border:solid 3px #F2F2F2;
+    border-radius:50px 50px 50px 50px;
+    font-weight:bolder;
+    background-color: #F2F2F2;
+    padding: 10px 10px 10px 0px;
+}
+/* info réseultat recherche */
+.i
+{
+    color: #0065FC;
+    font-size: 12px;
+    border: solid 1px #F2F2F2;
+    border-radius: 50px;
+    padding: 7px 12px 7px 12px;
+}
+.ligne
+{
+    margin-top: 5px;
+}
+
+
+
+
+
+/* body */
+.logement
+{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+/*étoile*/
+.fa-star
+{
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    align-self: flex-end;
+}
+.rempli
+{
+    color: #0065FC;
+}
+
+/*les plus populaires*/
+.les_plus_populaire
+    {
+        border:solid 4px #F2F2F2;
+        border-radius:15px 15px 15px 15px;
+        background-color: #F2F2F2;
+        width: 27%;
+        margin: 5px;
+        padding: 10px;
+    }
+.stat
+{
+    color: black;
+}
+.art_populaire
+{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px #B9B9B3;
+    height: 150px;
+    margin: 5px;
+}
+.imgp
+{
+    width: 33%;
+    height: 140px;
+    margin: 5px;
+    border-radius: 15px 0px 0px 15px;
+    float: left;
+    object-fit: cover;
+    object-position: center;
+}
+/*hébergement a marseille*/
+.Hebergement_a_marseille
+{
+    border:solid 4px #F2F2F2;
+    border-radius:15px 15px 15px 15px;
+    background-color: #F2F2F2;
+    width: 70%;
+    margin: 5px;
+    padding: 10px;
+}
+.art_hebergement
+{
+    border-radius: 15px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 10px #B9B9B3;
+    width: 30%;
+    height: 200px;
+    margin: 12px;
+}
+.imgh
+{
+    width: 100%;
+    height: 50%;
+    padding : 5px;
+    border-radius: 15px 15px 0px 0px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.plus
+{
+    padding: 10px;
+    font-weight: bolder;
+}
+/*activités a marseille*/
+.art_activite
+{
+    width: 100%;
+    box-shadow: 1px 1px 10px #F2F2F2;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.art12
+{
+    margin-top: 10px;
+}
+
+.art15
+{
+    margin-top: 10px;
+}
+
+.Image1, .Image2_3, .Image4, .Image5_6
+{
+    width: 24%;
+    margin: 0px 5px 0px 5px;
+}
+
+.imga10
+{
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga11
+{
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga12
+{
+    width: 100%;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga13
+{
+    width: 100%;
+    height: 315px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga14
+{
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+.imga15
+{
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+
+
+/* footer */
+footer
+    {
+        border:solid 2px #F2F2F2;
+        border-radius:0;
         background-color: #F2F2F2;
         padding: 30px;
         margin-top: 30px;
     }
 
-    footer div
-    {
-        margin-right: 15%;
-    }
-
-    footer div a
-    {
-        color: black;
-    }
-
-    strong
-    {
-        font-weight:bold;
-    }
-
-    
+footer div
+{
+    margin-right: 160px;
+}
+.puce
+{
+    padding: 5px;
+}
+}
