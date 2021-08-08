@@ -75,7 +75,7 @@ h3
 }
 strong
 {
-    font-weight: bolder;
+    font-weight: 900;
 }
 p
 {
@@ -112,21 +112,23 @@ header
 
 .hebergement
 {
-    position: absolute;
+    /*position: absolute;
     top: 90px;
-    left: 0px;
+    left: 0px;*/
+    width: 50%;
 }
 .activite
 {
-    position: absolute;
+    /*position: absolute;
     top: 90px;
-    right: 0px;
+    right: 0px;*/
+    width: 50%;
 }
 .inscription
 {
     position: absolute;
     top: 30px;
-    right: -10px;
+    right: 0;
 }
 
 .liste
@@ -138,16 +140,22 @@ header
     padding: 0px 55px 10px 55px;      /* marge intérieur menu */
     width: 50%;
 }
+nav {
+    width: 100%
+}
+nav ul {
+    border-bottom: 2px solid #F2F2F2;
+}
 nav ul a 
 {
-    color: black;             /* couleur du menu */
-    border-bottom: 2px solid #F2F2F2;
+    display: block;
+    color: black;             /* couleur du menu */ 
 }    
-nav ul a:hover
+/*nav ul a:hover
 {
     border-bottom: 2px solid #0065FC;
     color: #0065FC;
-}
+}*/
 #inscription
 {
     color: #0065FC;       /* couleur de l'inscrption */
@@ -271,7 +279,7 @@ button /* bouton de recherche */
 {
     flex-direction: row-reverse;
     justify-content: space-between;
-    width: 103%;
+    width: 100%;
 }
 /*étoile*/
 .fa-star
@@ -429,12 +437,12 @@ button /* bouton de recherche */
 /* footer */
 footer
     {
-        border:solid 2px #F2F2F2;
+        border:solid 0px #F2F2F2;
         border-radius:0;
         background-color: #F2F2F2;
         padding: 30px;
         margin-top: 30px;
-        width: 105%;
+        width: 100%;
     }
 
 footer div
@@ -469,7 +477,9 @@ footer div
         
         .menu
         {
+            align-items: center;
             padding: 15px;
+            padding-top: 0!important;
         }
         .logo
         {
@@ -479,25 +489,27 @@ footer div
         {
             padding: 30px;      /* marge intérieur menu */
         }
+        nav {
+            width: auto;
+        }
+        nav ul {
+            border-bottom: 0px solid #F2F2F2;
+        }
         nav ul a 
         {
             color: black;             /* couleur du menu */
-            border-bottom: 0px solid #F2F2F2;
         }    
-        nav ul a:hover
+        nav ul li:hover
         {
             box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
             color: #0065FC;                         /* couleur du menu au survol */
-            border-bottom: 0px solid #F2F2F2;
         }
-        
-        .hebergement
-        {
-            position:initial;
+        .liste {
+            margin: 0;
         }
-        .activite
+        .hebergement, .activite
         {
-            position: initial;
+            width: auto;
         }
         .inscription
         {
@@ -829,12 +841,12 @@ nav ul a
     color: black;             /* couleur du menu */
     border-bottom: 0px solid #F2F2F2;
 }    
-nav ul a:hover
+/*nav ul a:hover
 {
-    box-shadow: 0px 2px #0065FC inset;      /* ombre de bordure du menu au survol */
-    color: #0065FC;                         /* couleur du menu au survol */
+    box-shadow: 0px 2px #0065FC inset;      
+    color: #0065FC;                         
     border-bottom: 0px solid #F2F2F2;
-}
+}*/
 
 .hebergement
 {
